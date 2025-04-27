@@ -9,5 +9,10 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.DATEONLY
             }
         });
+
+        Aluno.associate = (models) => {
+            Aluno.belongsToMany(models.Curso, { through: 'AlunoCurso' });
+          };
+          
         return Aluno;
 };

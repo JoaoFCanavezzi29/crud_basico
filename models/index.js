@@ -19,6 +19,8 @@ db.sequelize = sequelize;
 db.Categoria = require("./categoria")(sequelize, DataTypes); 
 db.Professor = require("./professor")(sequelize, DataTypes);
 db.Aluno = require("./aluno")(sequelize, DataTypes);
+db.Curso = require("./curso")(sequelize, DataTypes);
+db.Disciplina = require('./disciplina')(sequelize, DataTypes);
 
 //db.Produto = require("./produto")(sequelize, DataTypes); 
 

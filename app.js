@@ -27,11 +27,15 @@ app.use("/", indexRouter);
 const categoriaRouter = require("./routes/categorias"); 
 const professorRouter = require("./routes/professor");
 const alunoRouter = require("./routes/aluno");
+const cursoRouter = require('./routes/curso');
+const disciplinaRouter = require('./routes/disciplina');
 //const produtoRouter = require("./routes/produtos"); 
 
 app.use("/categorias", categoriaRouter); 
 app.use('/professores', professorRouter);
 app.use('/alunos', alunoRouter);
+app.use('/cursos', cursoRouter);
+app.use('/disciplinas', disciplinaRouter);
 
 
 //app.use("/produtos", produtoRouter); 

@@ -10,7 +10,22 @@
 
  <label for="data_nascimento">Data de Nascimento</label> 
 
- <input type="date" class="form-control" id="data_nascimento" name="data_nascimento" required> 
+ <input type="date" class="form-control" id="data_nascimento" name="data_nascimento" required> <BR></BR>
+ <% if (cursos && cursos.length > 0) { %>
+    <div>
+        <label for="cursos" style="font-weight: bold; display: block; margin-bottom: 8px;">Selecionar Cursos</label>
+        <div>
+            <% cursos.forEach(curso => { %>
+                <label style="display: block; margin-bottom: 5px;">
+                    <input type="checkbox" name="cursos[]" value="<%= curso.id %>">
+                    <%= curso.nome %>
+                </label>
+            <% }) %>
+        </div>
+    </div>
+<% } %>
+
+
 
 </div> 
 
